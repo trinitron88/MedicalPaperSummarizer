@@ -50,7 +50,7 @@ pip install torch transformers datasets evaluate rouge-score sentencepiece accel
 source venv312/bin/activate
 
 # Run the training script
-python trainmodel_fixed.py
+python train_model.py
 ```
 
 The script will:
@@ -71,14 +71,13 @@ The script will:
 
 ```
 MedicalPaperSummarizer/
-├── trainmodel_fixed.py       # Main training script (Python 3.12 compatible)
-├── trainmodel.py              # Original training script
-├── trainmodel_v2.py           # Alternative version
-├── pubmed_abstracts.json      # Input data (PubMed articles)
-├── get_data.py                # Script to fetch PubMed data
-├── venv312/                   # Python 3.12 virtual environment
-├── pubmed-sum/                # Training outputs
-└── pubmed-summarizer-best/    # Final trained model
+├── train_model.py           # Main training script (Python 3.12 compatible)
+├── get_data.py              # Script to fetch PubMed data
+├── run_train.sh             # Helper script to launch training with env vars set
+├── run_training.sh          # Alternative launcher with additional macOS tweaks
+├── pubmed_abstracts.json    # Input data (PubMed articles)
+├── pubmed-sum/              # Training outputs
+└── pubmed-summarizer-best/  # Final trained model
 ```
 
 ## Known Issues & Solutions
@@ -89,7 +88,7 @@ If you encounter `[mutex.cc : 452] RAW: Lock blocking` errors, you're likely usi
 
 ### Overflow Error During Evaluation
 
-Fixed in `trainmodel_fixed.py` by properly handling tensor conversions and clipping values to valid ranges.
+Fixed in `train_model.py` by properly handling tensor conversions and clipping values to valid ranges.
 
 ## Data Format
 
