@@ -12,4 +12,4 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 export PYTORCH_ENABLE_MPS_FALLBACK=1
 
 # Use exec to replace shell with python process
-exec /usr/local/bin/python3 -u trainmodel_v2.py
+exec /usr/local/bin/python3 -u train_model.py

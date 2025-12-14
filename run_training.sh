@@ -17,4 +17,4 @@ if [ -f "/usr/local/lib/libomp.dylib" ]; then
 fi
 
 # Run with unbuffered output
-exec /usr/local/bin/python3 -u trainmodel_fixed.py
+exec /usr/local/bin/python3 -u train_model.py
