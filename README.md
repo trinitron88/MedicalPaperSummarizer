@@ -49,7 +49,7 @@ pip install torch transformers datasets evaluate rouge-score sentencepiece accel
 # Activate the virtual environment
 source venv312/bin/activate
 
-# Run the training script
+# Run the training script (the entrypoint is `train_model.py`)
 python train_model.py
 ```
 
